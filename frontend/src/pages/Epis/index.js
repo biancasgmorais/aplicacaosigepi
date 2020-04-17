@@ -43,7 +43,12 @@ export default function Epis({ location }) {
         <img src={capacete} alt="epis" />
         <h1>Edição de EPI's</h1>
 
-        <Form schema={schema} onSubmit={handleSubmit}>
+        <Form
+          initialData={epi}
+          onSubmit={handleSubmit}
+          schema={schema}
+          autoComplete="off"
+        >
           <h2>EPI</h2>
           <Input name="epi" />
           <h2>Descrição do EPI</h2>
