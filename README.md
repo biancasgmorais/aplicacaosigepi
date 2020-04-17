@@ -15,3 +15,7 @@ Esse sistema foi desenvolvido para cadastros de EPI's e Entregas na Universidade
 * Só usuários administradores podem entrar
 * Como o sistema foi feito para ser atrelado ao banco de dados da própria UFERSA, não é necessário cadastro de e-mail pois o banco conta com matriculas dos funcionário, nos quais são uma sequencia de números.
 * Da mesma forma a senha já está vinculada também ao banco de dados da UFERSA, sendo assim para que o emprestimo seja realizado o usuário devera validar com sua senha.
+
+# Rodando o projeto
+* É necessário ter o postgres e docker instalado
+
