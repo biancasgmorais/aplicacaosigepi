@@ -23,7 +23,7 @@ Esse sistema foi desenvolvido para cadastros de EPI's e Entregas na Universidade
 * Para a instação dos pacotes necessários, na pasta onde o arquivo foi baixado, pelo prompt de comando usar o comando: yarn install
 * Para a inicialização do banco de dados, deve ser utilizado o comando: docker --run COLOQUESUABASEDEDADOSAQUI -e POSTGRES_PASSWORD=COLOQUESUASENHAAQUI -p 5432:5432 -d postgres
 ## Backend
-* Com o código do backend aberto na IDE de sua escolha, usar yarn sequelize db:migrate para inserir as tabelas no banco de dados.
+* Com o código do backend aberto na IDE de sua escolha, usar o comando: yarn sequelize db:migrate, para inserir as tabelas no banco de dados.
 * Para rodar o código do backend em modo desenvolvedor, usar o comando: yarn dev
 ## Frontend
 * Para rodar o código do frontend em modo desenvolvedor, usar o comando: yarn start
