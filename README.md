@@ -1,29 +1,63 @@
-﻿# aplicacaosigepi
-Prototipo da Aplicação SIGEPI desenvolvida como atividade de estágio para a SUTIC - UFERSA
+# SIGEPI
 
-# Linguagens Utilizadas
-* ReactJS (frontend)
-* NodeJS (backend)
+Prototipo da aplicação **SIGEPI** desenvolvida como atividade de estágio para a **SUTIC - UFERSA**.
 
-# Resumo do Sistema
-Esse sistema foi desenvolvido para cadastros de EPI's e Entregas na Universidade Federal Rural do Semi-Árido, de acordo com a necessidade do usuário foram implementados campos necessários para cadastro, atualização, exclusão e listagem de ambos os modelos principais: Entrega e EPI, juntamente com a emissão de relatórios de acordo com o campo de pesquisa utilizado nas listagens. As cores foram decididas pelo usuário pelo modelo identidade visual da UFERSA.
+## Linguagens Utilizadas
 
-# Descrição
-* Usa JWT para autenticação
-* bcrypt para encriptação de senhas
-* A validação de dados é feita por protocolo Yup
-* Só usuários administradores podem entrar
-* Como o sistema foi feito para ser atrelado ao banco de dados da própria UFERSA, não é necessário cadastro de e-mail pois o banco conta com matriculas dos funcionário, nos quais são uma sequencia de números.
-* Da mesma forma a senha já está vinculada também ao banco de dados da UFERSA, sendo assim para que o emprestimo seja realizado o usuário devera validar com sua senha.
+- **Frontend**: ReactJS
+- **Backend**: NodeJS
 
-# Rodando o projeto
-## Ambos
-* É necessário ter o postgres e docker instalado
-* O gerenciador de pacotes Yarn deve estar instalado e habilitado
-* Para a instação dos pacotes necessários, na pasta onde o arquivo foi baixado, pelo prompt de comando usar o comando: yarn install
-* Para a inicialização do banco de dados, deve ser utilizado o comando: docker --run COLOQUESUABASEDEDADOSAQUI -e POSTGRES_PASSWORD=COLOQUESUASENHAAQUI -p 5432:5432 -d postgres
-## Backend
-* Com o código do backend aberto na IDE de sua escolha, usar o comando: yarn sequelize db:migrate, para inserir as tabelas no banco de dados.
-* Para rodar o código do backend em modo desenvolvedor, usar o comando: yarn dev
-## Frontend
-* Para rodar o código do frontend em modo desenvolvedor, usar o comando: yarn start
+## Resumo do Sistema
+
+O **SIGEPI** foi desenvolvido para o cadastro de **EPI's** e **entregas** na **Universidade Federal Rural do Semi-Árido (UFERSA)**. O sistema permite o cadastro, atualização, exclusão e listagem desses dois modelos principais, além da emissão de relatórios com base nos campos de pesquisa utilizados. A identidade visual do sistema foi definida pelas cores da UFERSA, de acordo com o modelo de sua identidade visual.
+
+## Funcionalidades
+
+- **EPI**: Cadastro, atualização, exclusão e listagem dos Equipamentos de Proteção Individual.
+- **Entrega**: Cadastro, atualização, exclusão e listagem das entregas de EPIs.
+- **Relatórios**: Emissão de relatórios com base nos filtros de pesquisa nas listagens.
+
+## Descrição
+
+- **Autenticação**: Utiliza **JWT** para autenticação de usuários.
+- **Segurança**: Senhas são criptografadas com **bcrypt**.
+- **Validação de Dados**: A validação dos dados é feita utilizando o protocolo **Yup**.
+- **Controle de Acesso**: Apenas **usuários administradores** têm acesso ao sistema.
+- **Integração com Banco de Dados UFERSA**: O sistema é integrado ao banco de dados da UFERSA, não sendo necessário cadastro de e-mail, pois as matrículas dos funcionários são usadas. A senha é vinculada ao banco de dados da UFERSA, sendo necessária para validar o empréstimo de EPIs.
+
+## Rodando o Projeto
+
+### Pré-requisitos
+
+- **PostgreSQL** e **Docker** instalados.
+- **Yarn** como gerenciador de pacotes.
+
+### Inicializando o Projeto
+
+1. **Instale as dependências**:
+   No diretório do projeto, execute o comando:
+   ```bash
+   yarn install
+   ```
+
+2. **Inicializando o Banco de Dados**:
+   Para rodar o banco de dados via Docker, execute o comando:
+   ```bash
+   docker run --name COLOQUESUABASEDEDADOSAQUI -e POSTGRES_PASSWORD=COLOQUESUASENHAAQUI -p 5432:5432 -d postgres
+   ```
+
+3. **Backend**:
+   - No diretório do backend, abra a IDE e execute:
+   ```bash
+   yarn sequelize db:migrate
+   ```
+   Para rodar o backend em modo desenvolvedor, use:
+   ```bash
+   yarn dev
+   ```
+
+4. **Frontend**:
+   - Para rodar o frontend em modo desenvolvedor, no diretório do frontend, use:
+   ```bash
+   yarn start
+   ```
